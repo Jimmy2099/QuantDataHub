@@ -7,7 +7,7 @@ This repository contains many scripts use for synchronizing stock market data fr
 
 - **Yahoo Finance**
 
-## DataSource
+## Database
 
 - **TIDB**
 - **MySQL**
