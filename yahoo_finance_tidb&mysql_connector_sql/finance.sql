@@ -2,19 +2,6 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for financial_record
--- ----------------------------
-DROP TABLE IF EXISTS `financial_record`;
-CREATE TABLE `financial_record`  (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `item_id` bigint NULL DEFAULT NULL,
-  `date` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `amount` double NULL DEFAULT NULL,
-  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 30001 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
-
--- ----------------------------
 -- Table structure for stock_code
 -- ----------------------------
 DROP TABLE IF EXISTS `stock_code`;
