@@ -3,7 +3,7 @@ import pymysql
 
 # Read Excel file
 excel_path = 'sse.xls'
-df = pd.read_excel(excel_path)
+df = pd.read_excel(excel_path, dtype={'A股代码': str})
 
 # Database configuration
 host = '-'
