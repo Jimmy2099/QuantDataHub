@@ -10,6 +10,15 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 - **szse**
 - **sse**
 
+## Data Source
+
+- **Yahoo Finance**
+
+## Database
+
+- **TIDB**
+- **MySQL**
+
 ### Technical Analysis Indicators
 - **AD**
 - **ADOSC**
@@ -28,18 +37,10 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 
 For more indicators, please refer to [indicators/README.md](indicators/README.md).
 
+### Indicators-FPGA
 
 ### Simulation Trading
 
 ### Trading Strategies
-
-## Data Source
-
-- **Yahoo Finance**
-
-## Database
-
-- **TIDB**
-- **MySQL**
 
 
