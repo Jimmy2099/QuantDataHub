@@ -11,7 +11,6 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 - **sse**
 
 ### Technical Analysis Indicators
-
 - **AD**
 - **ADOSC**
 - **ADX**
