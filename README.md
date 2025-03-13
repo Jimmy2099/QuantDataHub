@@ -9,7 +9,8 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 - **US, amex**
 - **CN, szse**
 - **CN, sse**
-
+- **HK, hkse**
+  
 ## Data Source
 
 - **Yahoo Finance**
