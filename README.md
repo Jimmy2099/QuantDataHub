@@ -12,6 +12,8 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 
 ### Technical analysis Indicators
 
+### Simulation Trading
+
 ## Data Source
 
 - **Yahoo Finance**
