@@ -30,6 +30,8 @@ For more indicators, please refer to [indicators/README.md](indicators/README.md
 
 ### Simulation Trading
 
+### Trading Strategies
+
 ## Data Source
 
 - **Yahoo Finance**
