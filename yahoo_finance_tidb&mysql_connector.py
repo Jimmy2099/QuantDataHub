@@ -6,6 +6,7 @@ import datetime
 import requests
 import mysql.connector
 import logging
+import os
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
