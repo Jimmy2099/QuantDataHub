@@ -1,5 +1,6 @@
 import pandas as pd
 import pymysql
+import os
 
 # Read Excel file
 excel_path = 'szse.xlsx'
