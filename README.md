@@ -7,6 +7,8 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 - **nasdaq**
 - **nyse**
 - **amex**
+- **szse**
+- **sse**
 
 ## Data Source
 
