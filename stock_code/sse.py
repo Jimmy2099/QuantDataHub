@@ -6,11 +6,12 @@ excel_path = 'sse.xls'
 df = pd.read_excel(excel_path, dtype={'A股代码': str})
 
 # Database configuration
-host = '-'
-port = 0
-user = '-'
-password = '-'
-database = '-'
+host = os.getenv('DB_HOST', 'localhost')  # Default to 'localhost' if not set
+port = int(os.getenv('DB_PORT', 3306))  # Default to 3306 if not set
+user = os.getenv('DB_USER', 'root')  # Default to 'root' if not set
+password = os.getenv('DB_PASSWORD', '-')  # Default to '-' if not set
+database = os.getenv('DB_NAME', '-')  # Default to '-' if not set
+
 
 # Connect to database
 conn = pymysql.connect(host=host,port=port, user=user, password=password, database=database, charset='utf8mb4')
