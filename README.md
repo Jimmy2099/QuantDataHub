@@ -4,11 +4,11 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 
 ## Finance Data
 ### Stock Market Data
-- **nasdaq**
-- **nyse**
-- **amex**
-- **szse**
-- **sse**
+- **US, nasdaq**
+- **US, nyse**
+- **US, amex**
+- **CN, szse**
+- **CN, sse**
 
 ## Data Source
 
