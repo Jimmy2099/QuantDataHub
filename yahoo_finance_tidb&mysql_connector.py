@@ -16,16 +16,22 @@ team_name = "-"
 channel_id = "-"
 token = "-"
 
+host = os.getenv('DB_HOST', 'localhost')  # Default to 'localhost' if not set
+port = int(os.getenv('DB_PORT', 3306))  # Default to 3306 if not set
+user = os.getenv('DB_USER', 'root')  # Default to 'root' if not set
+password = os.getenv('DB_PASSWORD', '-')  # Default to '-' if not set
+database = os.getenv('DB_NAME', '-')  # Default to '-' if not set
+
 app = Flask(__name__)
 
 # Create database connection
 # TIDB
 conn = mysql.connector.connect(
-    host='-',
-    user='-',
-    password='-',
-    database='-',
-    port=0,
+    host=host,
+    user=user,
+    password=password,
+    database=database,
+    port=port,
     charset='utf8mb4',
     autocommit=True,
     use_pure=True,
