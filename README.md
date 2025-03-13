@@ -10,6 +10,12 @@ This repository contains many scripts use for synchronizing **Finance Data** fro
 - **szse**
 - **sse**
 
+### Technical analysis Indicators
+
+
+### Deep Learning
+
+
 ## Data Source
 
 - **Yahoo Finance**
