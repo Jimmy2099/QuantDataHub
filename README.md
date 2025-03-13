@@ -43,4 +43,11 @@ For more indicators, please refer to [indicators/README.md](indicators/README.md
 
 ### Trading Strategies
 
+## Government Police Data
+
+## Company News Data
+
+## Annual Report Data
+
+
 
