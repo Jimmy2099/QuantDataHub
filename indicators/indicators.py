@@ -2,6 +2,7 @@ import pandas as pd
 import talib
 import pymysql
 import os
+import json
 
 host = os.getenv('DB_HOST', 'localhost')  # Default to 'localhost' if not set
 port = int(os.getenv('DB_PORT', 3306))  # Default to 3306 if not set
@@ -41,6 +42,27 @@ def load_data_from_db(stock_code, start_date, end_date, db_query_sec_record_num_
     except pymysql.MySQLError as e:
         print(f"Database connection or query failed: {e}")
         return None
+
+
+def clean_indicators(indicators):
+    """Remove NaN values from indicators and convert to JSON-serializable format"""
+    cleaned = {}
+
+    for key, value in indicators.items():
+        if isinstance(value, tuple):  # Handle tuple indicators like AROON
+            cleaned_tuple = []
+            for item in value:
+                if isinstance(item, pd.Series):
+                    cleaned_tuple.append([x for x in item.values if pd.notna(x)])
+                else:
+                    cleaned_tuple.append(item)
+            cleaned[key] = tuple(cleaned_tuple)
+        elif isinstance(value, pd.Series):
+            cleaned[key] = [x for x in value.values if pd.notna(x)]
+        else:
+            cleaned[key] = value
+
+    return cleaned
 
 
 # 2. Calculate stock indicators
@@ -100,7 +122,7 @@ def calculate_indicators(df):
     # Williams' %R (WILLR)
     indicators['WILLR'] = talib.WILLR(df['High'], df['Low'], df['Close'])
 
-    return indicators
+    return clean_indicators(indicators)
 
 
 # 3. Main program
@@ -109,11 +131,13 @@ def calc_stock_indicators(stock_code, start_date, end_date, record_num_limit=14)
     df = load_data_from_db(stock_code, start_date, end_date, record_num_limit)
 
     if df is not None:
-        df_with_indicators = calculate_indicators(df)
+        indicators = calculate_indicators(df)
 
-        print(df_with_indicators)
+        # Convert to JSON and print
+        json_output = json.dumps(indicators, indent=2)
+        print(json_output)
 
 
 # Example call
 if __name__ == "__main__":
-    calc_stock_indicators('AAPL', '2022-01-01', '2022-12-31')
+    calc_stock_indicators('AAPL', '2022-01-01', '2022-12-31', 50)
