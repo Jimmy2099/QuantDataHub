@@ -6,6 +6,9 @@ This repository contains some scripts use for synchronizing **Finance Data** fro
 
 With **AI System and RAG, MCP method**, you can build your own QuantDataHub, trust you own well-trained model and AI system is better than trust any third-party out-date datasource provider company.
 
+**Obtain -> Verify/Summarize/Deep Analysis** -> Take action  
+**(---------------QuantDataHub---------------)** -> Take action  
+
 ## Finance Data
 ### Stock Market Data
 - **US, nasdaq**
