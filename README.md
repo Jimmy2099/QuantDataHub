@@ -1,6 +1,9 @@
 # QuantDataHub
+![image](https://github.com/user-attachments/assets/88e473e3-d58c-415f-bc7a-33790d2711e2)
 
 This repository contains many scripts use for synchronizing **Finance Data** from **DataSource** into **Database**. 
+
+With AI and RAG, you can build your own QuantDataHub , trust you own model and AI system is better than trust third-party out-date datasource company.
 
 ## Finance Data
 ### Stock Market Data
