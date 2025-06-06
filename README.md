@@ -1,6 +1,6 @@
 # QuantDataHub
 
-![image](https://github.com/user-attachments/assets/865516d6-1522-4bdc-9bd7-8bff267d82b7)
+![image](https://github.com/user-attachments/assets/894afb04-b3cd-4a85-a016-b67a7fd171eb)
 
 This repository contains some scripts use for synchronizing **Finance Data** from **DataSource** into **Database**. (Public WEB/API) -> (Your own QuantDataHub)  
 
